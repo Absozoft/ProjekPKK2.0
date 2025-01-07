@@ -1,0 +1,407 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/72d9717d-2ba6-4008-bd25-ceb6d49b5f40/dbaepnm-a487d26c-d8c0-4bd7-8a42-17d2d79b97fa.png') no-repeat center center;
+    background-size: cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #412a10;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    position: relative;
+}
+
+.navbar .logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.navbar .menu-parent ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.navbar .menu-parent ul li {
+    display: inline;
+}
+
+.navbar .menu-parent ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .menu-parent ul li a:hover {
+    color: #efb63b;
+}
+
+/* Hamburger styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Responsif untuk perangkat kecil (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar .menu-parent ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        display: none;
+        width: 100%;
+        background-color: #412a10;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .menu-parent ul li {
+        display: block;
+    }
+
+    .navbar .menu-parent ul li a {
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar.active .menu-parent ul {
+        display: flex;
+    }
+
+    /* Animasi burger menu (klik untuk ubah bentuk) */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .namaproduk {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .header .btn {
+        padding: 12px 20px;
+    }
+
+    .header .poto img {
+        max-width: 80%;
+    }
+
+    footer .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-contact {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    footer .footer-social-media {
+        gap: 10px;
+    }
+
+    footer .footer-social-media a {
+        font-size: 25px;
+    }
+
+    footer .footer-content {
+        text-align: center;
+    }
+}
+
+/* Header and other styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 20px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.header .namaproduk {
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+.header .namaproduk h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.header .namaproduk h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.header .btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.header .btn:hover {
+    background-color: #d4d4d4;
+}
+
+.header .poto img {
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px black;
+    transition: transform 0.3s;
+    max-width: 100%; 
+}
+
+.header .poto img:hover {
+    transform: scale(1.1);
+}
+
+.wave {
+    background-color: #996a37;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+.testimoni {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.testimoni .review {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.testimoni .review img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimoni .review h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.testimoni .review p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimoni .review .fa {
+    color: orange;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #efb63b;
+    color: white;
+    padding: 40px 20px;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer .footer-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer .footer-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+footer .footer-contact {
+    display: flex;
+    flex-direction: column;  /* Menyusun teks secara vertikal */
+    text-align: left;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+footer .footer-contact h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer .footer-contact p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+footer .footer-contact .btnkontak {
+    padding: 10px 20px;
+    background-color: #44ca44;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+footer .footer-contact .btnkontak:hover {
+    background-color: #37b037;
+}
+
+/* Social Media Section */
+footer .footer-social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+footer .footer-social-media a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+footer .footer-social-media a:hover {
+    color: #efb63b;
+}
+
+
+/* Lokasi Section */
+.alamat {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.alamat h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.alamat p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.google-map iframe {
+    border: 0;
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+
+/* Responsif untuk perangkat sangat kecil (max-width: 480px) */
+@media (max-width: 480px) {
+
+    .header .namaproduk h1 {
+        font-size: 32px;
+    }
+
+    .header .poto img {
+        max-width: 100%;  /* Membatasi gambar agar lebih responsif */
+    }
+
+    .navbar .logo img {
+        height: 50px;
+    }
+
+    .header .namaproduk h1 {
+        font-size: 32px;
+    }
+
+    .header .namaproduk h4 {
+        font-size: 16px;
+    }
+
+    .testimoni .review {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    footer .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-contact {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    footer .footer-social-media {
+        gap: 10px;
+    }
+
+    footer .footer-social-media a {
+        font-size: 25px;
+    }
+
+    footer .footer-content {
+        text-align: center;
+    }
+    
+    .header .btn {
+        font-size: 16px;  /* Menyesuaikan ukuran font tombol pada layar kecil */
+    }
+}

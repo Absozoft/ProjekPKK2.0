@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cemilan Ceria</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            margin: 0;
+            background-size: 100% 40%;
+            background-repeat: no-repeat;
+        }
+        /* Navigation Bar */
+        .navbar{
+            width: 100%;
+            height: 80px;
+            padding: 0px;
+            background-color: rgb(65, 42, 16);
+            display: flex;
+            justify-content: space-between;
+            position: sticky;
+        }
+        .navbar div{
+            height: 100%;
+            background-color: rgb(65, 42, 16);
+        }
+        .navbar .logo{
+            width: 300px;
+            padding: 0;
+            background-color: rgb(65, 42, 16);
+            display: flex;
+            justify-content: center;
+            object-fit: contain;
+        }
+        .navbar .menu-parent{
+            width: 500px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar .camilan{
+            transform: scale(0.8);
+            margin-left: -20px;
+        }
+        /* Navigation List */
+        .list{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            color: white;
+            width: 100%;
+            margin-right: 10px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700px;
+            font-style: normal;
+        }
+        /* Header */
+        .header{
+            width: 1257px;
+            height: 600px;
+            display: flex;
+            margin: auto;
+        }
+        .logo .cireng{
+            background-size: cover;
+            transform: scale(1.01);
+    
+        }
+        .header .namaproduk{
+            width: 600px;
+            height: 100%;
+            font-size: 45px;
+            display: flexbox;
+        }
+        .header .namaproduk h1{
+            margin-left: 100px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-bottom: 10px;
+            margin-top: -50px;
+        }
+        .header .namaproduk h4{
+            margin-left: 80px;
+            font-size: 12px;
+            font-weight: 700;
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            opacity: calc(80%);
+            color: white;
+            text-align: center;
+
+        }
+        /* Tombol Untuk Pesanan */
+        .header .btn{
+            width: 350px;
+            height: 55px;
+            margin-left: 100px;
+            font-size: 20px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-radius: 2vmin;
+            border-width: 0;
+            text-decoration: none;
+            background-color: rgb(255, 255, 255);
+        }
+        /* Header Hover Pesan */
+        .header .btn:hover{
+            width: 370px;
+            height: 60px;
+            margin-left: 100px;
+            font-size: 20px;
+            border-radius: 2vmin;
+            background-color: rgb(199, 199, 199);
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .header .btnn{
+            text-decoration: none;
+            color: black;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .header .logo2{
+            width: 80px;
+            margin-bottom: 30px;
+            margin-top: 8px;
+            margin-left: 30px;
+        }
+        /* Navigation */
+        .menu-parent .balls{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+    
+        .menu-parent .balls:hover{
+            background-color: rgb(46, 30, 12);
+            padding: 25px;
+            border-radius: 2vmin;
+            transition: 0.3s;
+        }
+        /* Poto Cireng */
+        .header .poto{
+            height: 100%;
+            width: 1000px;
+        }
+        .header .poto .cirang{
+            margin-left: 22%;
+            margin-top: 130px;
+            border-radius: 10px;
+            width: 530px;
+            box-shadow: 2px 4px 10px black ;
+        }
+        .header .poto .cirang:hover{
+            transform: scale(1.1);
+            transition: 0.7s;
+        }
+        /* Pembungkus Judul dan tombol pesanan */
+        .header .pesan{
+            margin-top: 20px;
+            
+        }
+        /* Wave & Curve */
+        .wave{
+            width: 100%;
+            background-color: #996a37;
+            height: 600px;
+            margin-top: -10px;
+            text-align: center;
+        }
+        .wave-bg .curve{
+            margin-top: 20px;
+            
+        }
+        .wave h1{
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            font-weight: 790;
+            font-style: normal;
+            color: rgb(255, 255, 255);
+            font-size: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        /* Testimoni & Review */
+        .testimoni{
+            width:  1200px;
+            height: 450px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1500px;
+        }
+        .testimoni .review{
+            width: 400px;
+            height: 175px;
+            background-color: white;
+            border-radius: 30px;
+            margin-left: 70px;
+            display: flex;
+            box-shadow: 1px 1px 15px;
+            padding-right: 10px;
+        }
+        .testimoni .review:hover{
+            transform: scale(1.09);
+            transition: 0.5s;
+        }
+        .testimoni .ketiga{
+            margin-top: 100px;
+        }
+        /* Review Pfp */
+        .review .pfp{
+            margin-top: 15px;
+            height: 110px;
+            margin-left: 5px;
+            object-fit: cover;
+            margin-right: 0px;
+            padding: 15px;
+            border-radius: 100px;
+        }
+        /* Nama dan kometar */
+        .review .namapelanggan h1{
+            font-size: 18px;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 25px;
+            text-align: left;
+        }
+        .review .komentar{
+            color: rgb(88, 88, 88);
+            font-size: 9px;
+            text-align: justify;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /*====================== Rating ======================*/
+        .rating{
+            margin-left: -150px;
+            margin-top: 20px;
+            
+        }
+        .checked{
+            color: orange;
+        }
+
+        /*============= Alamat Produksi =============== */
+        .curve2{
+            margin-top: -150px;
+            background-color: #996a37;
+        }
+        .wave2 {
+            width: 100%;
+            background-color: #714e29;
+            height: 600px;
+            margin-top: -10px;
+        }
+        .wave2 .alamat{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 100px;
+            width: 1200px;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .wave2 .alamat h1{
+            text-align: center;
+            font-size: 80px;
+            margin-top: 100px;
+            margin-right: 0px;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .mapouter{
+            width: 300px;
+            border-radius: 2vmin;
+            overflow: hidden;
+            border: 5px rgb(207, 207, 207) solid;
+            margin-right: 50px;
+            box-shadow: 2px 5px 10px;
+            
+        }
+        /* Footer */
+        footer{
+            background-color: #efb63b;
+            height: 250px;
+            padding-top: 20px;
+        }
+        .footer{
+            display: flex;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1000px;
+            height: 100%;
+        }
+        .footer .kontak{
+            margin-left: 0px;
+            margin-top: 30px;
+        }
+        .footer .kontak h1{
+            font-size: 20px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .cirenglogo{
+            object-fit: contain;
+            background-color: #976937;
+            border-radius: 30px;
+            width: 150px;
+            height: 150px;
+            margin-left: 150px;
+            margin-top: 40px;
+            border: 3px #916435 solid;
+        }
+        .kontak .btnkontak{
+            width: 250px;
+            height: 55px;
+            font-size: 20px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-radius: 2vmin;
+            border-width: 0;
+            text-decoration: none;
+            background-color: rgb(68, 202, 68);
+            color: white;
+            margin-top: 20px;
+        }
+        .medsos{
+            font-size: 25px;
+            width: 50px;
+            height: 50px;
+            margin-left: 20px;
+            border-radius: 10px;
+            border-width: 0;
+            margin-top: 23px;
+            background-color: transparent;
+            border: solid white 4px;
+            color: black;
+        }
+        .kontak a{
+            text-decoration: none;
+        }
+        .kontak button:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        .med{
+            height: 100px;
+            width: 500px;
+            display: flex;
+        }
+
+
+        /* Hover Kontak/Medsos */
+        .btnkontak:hover{
+            border: 2px rgb(255, 255, 255) solid;
+            background-color: rgb(65, 255, 65);
+        }
+        .medsos:hover{
+            transform: scale(1.3);
+            transition: 0.5s;
+        }
+        p {
+            font-family: "Poppins", sans-serif;
+            font-weight: 790;
+            font-style: normal;
+        }
+        .kontak p{
+            margin: 0px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+
+<body background="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/72d9717d-2ba6-4008-bd25-ceb6d49b5f40/dbaepnm-a487d26c-d8c0-4bd7-8a42-17d2d79b97fa.png/v1/fill/w_1249,h_640,q_70,strp/sunlit_mountainside_mspaint_background__large__by_birritan_dbaepnm-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODQwIiwicGF0aCI6IlwvZlwvNzJkOTcxN2QtMmJhNi00MDA4LWJkMjUtY2ViNmQ0OWI1ZjQwXC9kYmFlcG5tLWE0ODdkMjZjLWQ4YzAtNGJkNy04YTQyLTE3ZDJkNzliOTdmYS5wbmciLCJ3aWR0aCI6Ijw9MTY0MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.c1E35QAURBY1qRWoYReORZsXgKhxwiysQuxutSTsU8U">
+
+    <!-- Navigation -->
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="logocireng.png" class="cireng">
+            <img src="camilanceria.png" class="camilan">
+        </div>
+        <div class="menu-parent">
+            <ul class="list">
+                <li class="menu"><a href="" class="balls">Home</a></li>
+                <li class="menu"><a href="#testi" class="balls">Testimoni</a></li>
+                <li class="menu"><a href="#alamat" class="balls">Alamat</a></li>
+                <li class="menu"><a href="#kontak" class="balls">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header -->
+
+    <div class="header">
+        <div class="namaproduk">
+            <div class="pesan">
+            <img class="logo2" src="logocireng.png">
+            <h1>CIRENG AYAM SUWIR</h1>
+            <h4>Cireng lezat berisi ayam suwir gurih, dibalut dengan cita rasa pedas yang nikmat dan pas di lidah. Cocok untuk menemani waktu santai Anda!</h4>
+            <a href="https://api.whatsapp.com/send/?phone=6285692517903&text&type=phone_number&app_absent=0" class="btnn"><button class="btn" href=""><i class="bi bi-cart2" style="letter-spacing: 20px;"></i>PESAN SEKARANG</button></a>
+            </div>
+        </div>
+        <div class="poto">
+            <img src="cirengswir.png" class="cirang">
+        </div>
+
+    </div>
+
+    <!-- Section -->
+<div class="wave-bg">
+    <div class="curve">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#996a37" fill-opacity="1" d="M0,64L60,80C120,96,240,128,360,133.3C480,139,600,117,720,96C840,75,960,53,1080,48C1200,43,1320,53,1380,58.7L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        </svg>
+        
+    </div>
+    <div class="wave">
+        <h1 id="testi">Terimaksih telah menikmati cireng kami</h1>
+        <!-- Review & Testimoni -->
+        <div class="testimoni">
+            <div class="review">
+                <img src="https://i0.wp.com/digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png?fit=500%2C500&ssl=1" class="pfp">
+                <div class="namapelanggan">
+                    <h1>Abdi</h1>   
+                    <p class="komentar" style="font-size: 12px;">Rasa cirengnya sangat enak! Aku sampai membelinya 5 !! Pokoknya terbaik </p>
+                    <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://i0.wp.com/digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png?fit=500%2C500&ssl=1" class="pfp">
+                <div class="namapelanggan">
+                    <h1>Sinta</h1>   
+                    <p class="komentar" style="font-size: 13px;">Pedasnya pas dan rasanya gurih, recommended banget!</p>
+                    <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://i0.wp.com/digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png?fit=500%2C500&ssl=1" class="pfp">
+                <div class="namapelanggan">
+                    <h1>Farel</h1>   
+                    <p class="komentar" style="font-size: 12px;">Enak cik cirengnya mamahku sampe minta terus</p>
+                    <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Section 2 -->
+         
+        <div class="curve2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#714e29" fill-opacity="1" d="M0,224L48,202.7C96,181,192,139,288,154.7C384,171,480,245,576,277.3C672,309,768,299,864,256C960,213,1056,139,1152,128C1248,117,1344,171,1392,197.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+              </svg>
+              <div class="wave2">
+                <div class="alamat" id="alamat">
+                <div>
+                    <h1>ALAMAT PRODUKSI</h1>
+                </div>
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="664" height="444" id="gmap_canvas" src="https://maps.google.com/maps?q=Jl.+Baladewa+West+Cikampek%2C+Cikampek%2C+Karawang%2C+West+Java+41373%2C+Indonesia&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">                          
+                        </iframe>
+                        <a href="https://textcaseconvert.com"></a>
+                        <br>
+                        <a href="https://www.tabclocktab.com"></a>
+                        <br>
+                        <style>.mapouter{position: relative;text-align: right;height: 444px;width: 664px;}</style><a href="https://www.ongooglemaps.com">google maps html code</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 444px;width: 664px;}</style>
+                    </div>
+                </div>
+                </div>
+              </div>
+        </div>
+
+    <!-- Footer / Kontak -->
+
+    <footer>
+        <div class="footer" id="kontak">
+            <img src="logo.png" class="cirenglogo">
+            <hr style="margin: 50px; color: white; border: 1px white solid;">
+            <div class="kontak">
+                <h1>Silahkan Hubungi Kami Untuk Memesan Cireng Kami!</h1>
+                <div class="med">
+                <a href="https://api.whatsapp.com/send/?phone=6285692517903&text&type=phone_number&app_absent=0">
+                    <button class="btnkontak">
+                        <i class="bi bi-whatsapp" style="letter-spacing: 10px;"></i>
+                    Hubungi Whatsapp</button>
+                </a>
+                <a href="">
+                    <button class="medsos instagram">
+                        <i class="bi bi-instagram"></i>
+                    </button>
+                </a>
+                <a href="https://www.facebook.com/share/15quzymU2T/">
+                    <button class="medsos facebook">
+                        <i class="bi bi-facebook"></i>
+                    </button>
+                </a>
+                <a href="https://www.youtube.com/@CemilanCeria">
+                    <button class="medsos youtube">
+                        <i class="bi bi-youtube"></i>
+                    </button>
+                </a>
+                </div>
+                <p>Created by <a href="" style="color: black; margin-top: -10;">Zeb.</a> | © 2024. </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
